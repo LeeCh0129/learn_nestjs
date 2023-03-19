@@ -33,6 +33,11 @@ export class BoardsService {
   deleteBoard(id: string): void {
     this.boards = this.boards.filter((board) => board.id !== id); // 아이디가 다른것만 남겨주고, 아이디가 같은것은 지워줌.
   }
+  updateBoardStatus(id: string, status: BoardStatus): Board {
+    const board = this.getBoardById(id);
+    board.status = status;
+    return board;
+  }
 }
 
 // AppModule에서 BoardsService를 사용하기 위해 export한다.
