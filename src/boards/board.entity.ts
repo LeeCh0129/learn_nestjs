@@ -20,18 +20,3 @@ export class Board extends BaseEntity {
   })
   status: BoardStatus;
 }
-
-// @Entity()
-// export class Board extends BaseEntity {
-//   @PrimaryGeneratedColumn()
-//   id: number;
-
-//   @Column({ type: 'varchar' }) // title 필드의 타입을 명시합니다.
-//   title: string;
-
-//   @Column({ type: 'varchar' }) // description 필드의 타입을 명시합니다.
-//   description: string;
-
-//   @Column({ type: 'enum', enum: BoardStatus }) // status 필드의 타입을 명시합니다.
-//   status: BoardStatus;
-// }
