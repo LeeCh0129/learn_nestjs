@@ -7,6 +7,7 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { typeORMConfig } from './configs/typeorm.config';
 import { ConfigModule } from '@nestjs/config';
 import { BoardRepository } from './boards/board.repository';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { BoardRepository } from './boards/board.repository';
       imports: [ConfigModule],
     }),
     BoardsModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
