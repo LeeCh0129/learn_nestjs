@@ -1,8 +1,12 @@
+import { MailerService } from '@nestjs-modules/mailer';
 import {
   Body,
   Controller,
+  Get,
+  Param,
+  ParseUUIDPipe,
   Post,
-  Req,
+  Query,
   UseGuards,
   ValidationPipe,
 } from '@nestjs/common';
